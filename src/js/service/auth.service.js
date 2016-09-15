@@ -21,7 +21,7 @@
     function Auth($http, User, $state) {
 
         var _csrf_token;
-        var targetState = {name: 'app.dashboard'};
+        var targetState = {name: 'app.users'};
 
         return {
             initLoginForm: initLoginForm,
@@ -36,7 +36,7 @@
          */
         function initLoginForm(callback) {
             $http
-                .get('/manage/login')
+                .get('/master/login')
                 .success(function (response) {
                     _csrf_token = response;
                     if (typeof callback == 'function') {
@@ -58,7 +58,7 @@
          */
         function login(data) {
             $http
-                .post('/manage/login_check', $.param({
+                .post('/master/login_check', $.param({
                     _username: data.username,
                     _password: data.password,
                     _remember_me: data.remember,

@@ -31,14 +31,14 @@
         var dataSource = {
             resource: {
                 method: 'GET',
-                url: '/manage/profile/get_authorized_user_data'
+                url: '/master/user/data'
             },
             pending: false
         };
         var service = {
             name: '',
             email: '',
-            picture: '/admin/build/img/user/no-image.jpg',
+            picture: '/public/admin/build/img/user/no-image.jpg',
             settings: {},
             authorized: false,
             init: init,

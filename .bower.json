@@ -1,0 +1,13 @@
+{
+  "name": "user",
+  "homepage": "https://github.com/imaximius/user",
+  "_release": "cd8d4c5cfc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cd8d4c5cfc43c5c310bc63c8f4d45a5f14c8e11a"
+  },
+  "_source": "https://github.com/imaximius/user.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/imaximius/user.git"
+}
