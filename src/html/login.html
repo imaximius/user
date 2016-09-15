@@ -1,14 +1,14 @@
 <div ng-controller="LoginController" class="block-center mt-xl wd-xl">
     <!-- START panel-->
     <div class="panel panel-dark panel-flat">
-        <div class="panel-heading text-center">
-            <a href="#">
+        <div class="panel-heading text-center clearfix">
+            <a href="#" class="pull-left">
                 <img src="/public/admin/build/img/logo.png" alt="Image" class="block-left img-rounded"/>
             </a>
 
-            <div uib-dropdown="" is-open="language.listIsOpen">
-                <a uib-dropdown-toggle="">
-                    <em class="icon-globe-alt"></em>
+            <div uib-dropdown="" is-open="language.listIsOpen" class="pull-right">
+                <a uib-dropdown-toggle="" uib-tooltip="{{language.selected}}">
+                    <em class="fa fa-globe"></em>
                     {{language.selected}}
                 </a>
 
@@ -25,16 +25,17 @@
             <form role="form" ng-submit="submit()" name="form" novalidate="" class="form-validate mb-lg">
                 <div ng-show="error != ''" class="alert alert-danger text-center" translate="{{error}}">{{error}}</div>
                 <div class="form-group has-feedback">
-                    <input type="text" name="username" placeholder="user.ENTER_USER_NAME" autocomplete="off" ng-model="username" required="required" class="form-control"/>
+                    <input type="text" name="username" placeholder="{{ 'user.ENTER_USER_NAME' | translate }}" autocomplete="off" ng-model="username" required="required" class="form-control"/>
                     <span class="fa fa-envelope form-control-feedback text-muted"></span>
-                    <span ng-show="form.username.$dirty && form.username.$error.required" class="text-danger"
-                          translate="validators.FIELD_REQUIRED">This field is required</span>
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="text-danger" translate="validators.FIELD_REQUIRED">
+                        This field is required
+                    </span>
                     <span ng-show="form.username.$dirty && form.username.$error.username" class="text-danger" translate="validators.NOT_VALID_EMAIL">
                         This field must be a valid username address
                     </span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" name="password" placeholder="user.ENTER_PASSWORD" ng-model="password" required="required" class="form-control"/>
+                    <input type="password" name="password" placeholder="{{ 'user.ENTER_PASSWORD' | translate }}" ng-model="password" required="required" class="form-control"/>
                     <span class="fa fa-lock form-control-feedback text-muted"></span>
                     <span ng-show="form.password.$dirty && form.password.$error.required" class="text-danger" translate="validators.FIELD_REQUIRED">
                         This field is required
