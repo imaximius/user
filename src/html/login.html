@@ -5,11 +5,11 @@
             <a href="#" class="pull-left">
                 <img src="/public/admin/build/img/logo.png" alt="Image" class="block-left img-rounded"/>
             </a>
-
-            <div uib-dropdown="" is-open="language.listIsOpen" class="pull-right">
-                <a uib-dropdown-toggle="" uib-tooltip="{{language.selected}}">
+            <div uib-dropdown="" is-open="language.listIsOpen" class="pull-right mt-sm">
+                <a uib-dropdown-toggle="" role="button">
                     <em class="fa fa-globe"></em>
                     {{language.selected}}
+                    <b class="caret"></b>
                 </a>
 
                 <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
@@ -18,7 +18,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
         <div class="panel-body" ng-class="{'whirl traditional': inLoading}">
             <p class="text-center pv" translate="user.SIGN_IN_TO_CONTINUE">SIGN IN TO CONTINUE.</p>
