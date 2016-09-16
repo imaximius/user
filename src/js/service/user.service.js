@@ -76,7 +76,7 @@
             $http({
                     url: '/master/profile/settings',
                     method: "POST",
-                    data: $.param(e),
+                    data: $.param(settings),
                     headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}
                 })
                 .success(function (response) {
