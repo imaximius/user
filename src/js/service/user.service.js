@@ -97,7 +97,7 @@
         }
 
         function setData(data) {
-            (['name', 'email', 'settings', 'authorized']).forEach(function (field) {
+            (['name', 'email', 'settings', 'authorized', 'picture']).forEach(function (field) {
                 if (typeof data[field] == 'undefined') {
                     return;
                 }
