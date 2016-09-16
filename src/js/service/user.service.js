@@ -74,11 +74,10 @@
 
         function setSettings(settings, onSuccess, onError) {
             $http({
-                    url: '/master/profile/settings',
-                    method: "POST",
-                    data: $.param(settings),
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}
-                })
+                url: '/master/profile/settings',
+                method: "POST",
+                data: settings
+            })
                 .success(function (response) {
                     service.settings = settings;
                     if (typeof onSuccess == 'function') {
