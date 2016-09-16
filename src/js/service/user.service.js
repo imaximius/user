@@ -76,8 +76,8 @@
             $http({
                     url: '/master/profile/settings',
                     method: "POST",
-                    data: JSON.stringify(settings),
-                    headers: {'Content-Type': 'application/json'}
+                    data: $.param(e),
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}
                 })
                 .success(function (response) {
                     service.settings = settings;
