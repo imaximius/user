@@ -73,8 +73,12 @@
         }
 
         function setSettings(settings, onSuccess, onError) {
-            $http
-                .post('/master/profile/settings', JSON.stringify(settings))
+            $http({
+                    url: '/master/profile/settings',
+                    method: "POST",
+                    data: JSON.stringify(settings),
+                    headers: {'Content-Type': 'application/json'}
+                })
                 .success(function (response) {
                     service.settings = settings;
                     if (typeof onSuccess == 'function') {
