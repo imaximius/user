@@ -74,7 +74,7 @@
 
         function setSettings(settings, onSuccess, onError) {
             $http
-                .post('/manage/profile/settings', settings)
+                .post('/master/profile/settings', settings)
                 .success(function (response) {
                     service.settings = settings;
                     if (typeof onSuccess == 'function') {
