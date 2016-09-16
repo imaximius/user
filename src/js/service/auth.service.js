@@ -59,14 +59,14 @@
         function login(data) {
             $http
                 .post('/master/login_check', $.param({
-                    _username: data.username,
-                    _password: data.password,
-                    _remember_me: data.remember,
-                    _csrf_token: _csrf_token
-                }),
-                {
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-                })
+                        _username: data.username,
+                        _password: data.password,
+                        _remember_me: data.remember,
+                        _csrf_token: _csrf_token
+                    }),
+                    {
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                    })
                 .success(function (response) {
                     var event = createEvent(response);
 
@@ -99,7 +99,7 @@
          */
         function logout(data) {
             $http
-                .get('/manage/logout')
+                .get('/master/logout')
                 .success(function (response) {
                     var event = createEvent(response);
 

@@ -22,7 +22,7 @@
             vm.save = save;
             vm.close = close;
             $http
-                .get('/manage/profile/edit')
+                .get('/master/profile/edit')
                 .success(function (response) {
                     angular.forEach(response.form, function (field) {
                         this[field.name] = {
@@ -53,7 +53,7 @@
                 }, (data = {}));
 
                 $http
-                    .post('/manage/profile/edit', $.param(data), {
+                    .post('/master/profile/edit', $.param(data), {
                         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                     })
                     .success(onSaveSuccess)
